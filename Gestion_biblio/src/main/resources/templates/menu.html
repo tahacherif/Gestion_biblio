@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Menu</title>
+</head>
+
+<body>
+<div align=center>
+<label><h1> Menu : Gestion de la librairie Cherif </h1></label>
+</div>
+<div align=center>
+<a th:href="@{/livre/gerer}"><h1> Ajouter des livres </h1></a>
+</div>
+<div align=center>
+<a th:href="@{/auteur/gerer}"><h1> Ajouter des auteurs </h1></a>
+</div>
+<div align=center>
+<a th:href="@{/livre/affecterAuteur}"><h1> Affectation des auteurs
+aux livres </h1></a>
+</div>
+<hr>
+</body>
+</html>

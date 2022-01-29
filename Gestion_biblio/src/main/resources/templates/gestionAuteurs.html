@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Gestion Auteurs</title>
+</head>
+
+<body>
+	<center>
+
+		<h1>Gestion des Auteurs</h1>
+
+	</center>
+	<form action="/auteur/menu">
+		<button type="submit" class="btn btn-primary" value="menu">Menu</button>
+	</form>
+	<hr></hr>
+	<br>
+	<div class="row">
+			<form method="get" action="/auteur/add">
+					<input type="text" class="form-control" id="floatingInput"
+						name="nomPrenom" placeholder="nom et prenom"> <label
+						for="floatingInput">Nom et prenom</label> <br>
+					<button type="submit" class="btn btn-primary" value="Ajouter">Ajouter</button>
+				
+			</form>
+		
+			<table class="table table-hover">
+				<thead>
+					<tr class="table-light">
+						<th class="table-light">ID</th>
+						<th class="table-light">Nom et Prenom</th>
+						<th class="table-light">Nombre de Points</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-light" th:each="e:${auteurs}">
+						<td class="table-light" th:utext="${e.getId()}"></td>
+						<td class="table-light" th:utext="${e.getNomPrenom()}"></td>
+						<td class="table-light" th:utext="${e.getNbrePoints()}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+
+</html>
